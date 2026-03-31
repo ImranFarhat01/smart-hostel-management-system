@@ -428,7 +428,7 @@ All strategies automatically fall back to **BEST_FIT** if no matching room is fo
 The system ships with realistic sample data so you can test every feature immediately:
 
 - **18 rooms** across 3 floors (Ground, First, Second) with 4 types - Dormitory, Standard, Deluxe, Suite
-- **10 students** from 5 departments (CS, ECE, Mechanical, Civil, IT) across years 1–4
+- **10 students** from 5 departments (CS, ECE, Mechanical, Civil, IT) across years 1-4
 - **8 fee records** demonstrating all payment states - Paid, Partial, Pending, Overdue
 - **6 complaints** covering all workflow states - Open, In Progress, Resolved, Rejected, Escalated
 
