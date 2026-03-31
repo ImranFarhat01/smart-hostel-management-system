@@ -15,10 +15,10 @@ Managing a hostel manually is a nightmare. Wardens juggle paper registers, stude
 
 Specifically, manual hostel management leads to:
 
-- **Room allocation errors** — overbooking, capacity violations, and duplicate assignments that take hours to cross-check in paper registers
-- **Untracked fee payments** — lost receipts, disputed balances, no overdue alerts, and zero visibility into collection rates
-- **Unresolved complaints** — no tracking, no accountability, no escalation path. Critical issues like electrical faults go unattended for days
-- **Poor data visibility** — no real-time occupancy metrics, no financial reports, no way to make informed decisions
+- **Room allocation errors**  overbooking, capacity violations, and duplicate assignments that take hours to cross-check in paper registers
+- **Untracked fee payments**  lost receipts, disputed balances, no overdue alerts, and zero visibility into collection rates
+- **Unresolved complaints**  no tracking, no accountability, no escalation path. Critical issues like electrical faults go unattended for days
+- **Poor data visibility**  no real-time occupancy metrics, no financial reports, no way to make informed decisions
 
 These inefficiencies affect **1000+ students per hostel** and create administrative bottlenecks that waste hours daily. This system fixes all of that.
 
@@ -42,13 +42,13 @@ The system can scale from a **single-hostel deployment** to a **full hostel ERP*
 
 ## What This System Does
 
-**Student Management** — Register students, track their details, assign them to rooms, and manage their hostel lifecycle from admission to graduation. Search by name, email, enrollment number, or filter by department and year.
+**Student Management**  Register students, track their details, assign them to rooms, and manage their hostel lifecycle from admission to graduation. Search by name, email, enrollment number, or filter by department and year.
 
-**Room Allocation** — 18 pre-configured rooms across 3 floors with 4 room types (Dormitory, Standard, Deluxe, Suite). The system prevents overbooking, tracks occupancy in real-time, supports room transfers, and includes a smart allocation engine with 4 strategies.
+**Room Allocation**  18 pre-configured rooms across 3 floors with 4 room types (Dormitory, Standard, Deluxe, Suite). The system prevents overbooking, tracks occupancy in real-time, supports room transfers, and includes a smart allocation engine with 4 strategies.
 
-**Fee Tracking** — Create fee records individually or in bulk, process full or partial payments, detect overdue balances automatically, waive fees with reason tracking, and generate semester-wise financial reports showing collection rates and outstanding amounts.
+**Fee Tracking**  Create fee records individually or in bulk, process full or partial payments, detect overdue balances automatically, waive fees with reason tracking, and generate semester-wise financial reports showing collection rates and outstanding amounts.
 
-**Complaint System** — Students file complaints with 11 categories and 4 priority levels. Staff get assigned, complaints move through a strict workflow (Open → In Progress → Resolved/Rejected), critical issues get escalated automatically, and the system tracks resolution rates and category breakdowns.
+**Complaint System**  Students file complaints with 11 categories and 4 priority levels. Staff get assigned, complaints move through a strict workflow (Open → In Progress → Resolved/Rejected), critical issues get escalated automatically, and the system tracks resolution rates and category breakdowns.
 
 ---
 
@@ -152,8 +152,8 @@ hostel-management-system/
 ## How to Run
 
 ### What You Need
-- **Java 17** or higher — [Download Amazon Corretto](https://aws.amazon.com/corretto/)
-- **Maven** — or just use IntelliJ IDEA (it has Maven built-in)
+- **Java 17** or higher  [Download Amazon Corretto](https://aws.amazon.com/corretto/)
+- **Maven**  or just use IntelliJ IDEA (it has Maven built-in)
 
 ### Option 1: Using IntelliJ IDEA (Recommended)
 
@@ -162,7 +162,7 @@ hostel-management-system/
    git clone https://github.com/ImranFarhat01/smart-hostel-management-system.git
    ```
 2. Open IntelliJ → **File → Open** → select the `hostel-management-system` folder
-3. IntelliJ will detect `pom.xml` — click **Trust Project** when prompted
+3. IntelliJ will detect `pom.xml`  click **Trust Project** when prompted
 4. Wait for Maven to download all dependencies (watch the progress bar at the bottom)
 5. Go to **File → Project Structure → Project** and make sure SDK is set to **Java 17**
 6. Open `src/main/java/com/hostel/main/Application.java`
@@ -346,7 +346,7 @@ The `AllocationEngine` utility implements the **Strategy design pattern** with 4
 | **DEPARTMENT_GROUPING** | Places student with same-department peers | Building academic communities |
 | **YEAR_BASED** | Groups students by year of study | Keeping freshers together |
 
-All strategies automatically fall back to **BEST_FIT** if no matching room is found. The engine also supports **bulk allocation** — assign rooms to all unassigned students in a single operation.
+All strategies automatically fall back to **BEST_FIT** if no matching room is found. The engine also supports **bulk allocation**  assign rooms to all unassigned students in a single operation.
 
 ---
 
@@ -379,7 +379,7 @@ All strategies automatically fall back to **BEST_FIT** if no matching room is fo
 
 ## Sample API Responses
 
-**Room Statistics** — `GET /api/rooms/stats`
+**Room Statistics**  `GET /api/rooms/stats`
 ```json
 {
   "totalRooms": 18,
@@ -391,7 +391,7 @@ All strategies automatically fall back to **BEST_FIT** if no matching room is fo
 }
 ```
 
-**Complaint Statistics** — `GET /api/complaints/stats`
+**Complaint Statistics**  `GET /api/complaints/stats`
 ```json
 {
   "totalComplaints": 6,
@@ -409,7 +409,7 @@ All strategies automatically fall back to **BEST_FIT** if no matching room is fo
 }
 ```
 
-**Health Check** — `GET /actuator/health`
+**Health Check**  `GET /actuator/health`
 ```json
 {
   "status": "UP",
@@ -427,10 +427,10 @@ All strategies automatically fall back to **BEST_FIT** if no matching room is fo
 
 The system ships with realistic sample data so you can test every feature immediately:
 
-- **18 rooms** across 3 floors (Ground, First, Second) with 4 types — Dormitory, Standard, Deluxe, Suite
+- **18 rooms** across 3 floors (Ground, First, Second) with 4 types  Dormitory, Standard, Deluxe, Suite
 - **10 students** from 5 departments (CS, ECE, Mechanical, Civil, IT) across years 1–4
-- **8 fee records** demonstrating all payment states — Paid, Partial, Pending, Overdue
-- **6 complaints** covering all workflow states — Open, In Progress, Resolved, Rejected, Escalated
+- **8 fee records** demonstrating all payment states  Paid, Partial, Pending, Overdue
+- **6 complaints** covering all workflow states  Open, In Progress, Resolved, Rejected, Escalated
 
 ---
 
@@ -470,20 +470,20 @@ mvn test
    spring.jpa.hibernate.ddl-auto=update
    ```
 
-3. Run the application — tables will be created automatically.
+3. Run the application  tables will be created automatically.
 
 ---
 
 ## Future Scope
 
-- **Mobile App** — Android/iOS for students to check rooms, pay fees, and file complaints on the go
-- **Payment Gateway** — Razorpay/Stripe integration for secure online fee payments with automated receipts
-- **Admin Dashboard** — React frontend with real-time charts showing occupancy trends and collection rates
-- **Email/SMS Alerts** — Automated notifications for fee due dates, complaint updates, and emergency broadcasts
-- **Biometric Attendance** — Entry/exit tracking with fingerprint scanners and parent notification
-- **AI-Based Allocation** — Machine learning model trained on student preferences for optimal roommate matching
-- **Multi-Hostel Support** — Manage multiple hostel buildings from a single centralized dashboard
-- **Visitor Management** — Digital visitor registration with OTP verification and time-bound access passes
+- **Mobile App**  Android/iOS for students to check rooms, pay fees, and file complaints on the go
+- **Payment Gateway**  Razorpay/Stripe integration for secure online fee payments with automated receipts
+- **Admin Dashboard**  React frontend with real-time charts showing occupancy trends and collection rates
+- **Email/SMS Alerts**  Automated notifications for fee due dates, complaint updates, and emergency broadcasts
+- **Biometric Attendance**  Entry/exit tracking with fingerprint scanners and parent notification
+- **AI-Based Allocation**  Machine learning model trained on student preferences for optimal roommate matching
+- **Multi-Hostel Support**  Manage multiple hostel buildings from a single centralized dashboard
+- **Visitor Management**  Digital visitor registration with OTP verification and time-bound access passes
 
 ---
 
