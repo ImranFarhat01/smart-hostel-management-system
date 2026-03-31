@@ -159,7 +159,7 @@ hostel-management-system/
 
 1. Clone this repository
    ```
-   git clone https://github.com/ImranFarhat01/smart-hostel-management-system.git
+   git clone https://github.com/ImranFarhat01/smart-hostel-management-system-24BAI10276.git
    ```
 2. Open IntelliJ → **File → Open** → select the `hostel-management-system` folder
 3. IntelliJ will detect `pom.xml` - click **Trust Project** when prompted
@@ -171,7 +171,7 @@ hostel-management-system/
 ### Option 2: Using Command Line
 
 ```bash
-git clone https://github.com/ImranFarhat01/smart-hostel-management-system.git
+git clone https://github.com/ImranFarhat01/smart-hostel-management-system-24BAI10276.git
 cd hostel-management-system
 mvn clean install
 mvn spring-boot:run
